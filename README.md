@@ -54,6 +54,10 @@ Back in the hub, Far Far West's own weapons return.
 
 Logs: `FarFarWest/Binaries/Win64/ue4ss/Mods/RockAndStoneFrontier/data/` (`rsf.log`, `drg_extract.log`).
 
+## License
+
+MIT (see LICENSE). Remixes welcome.
+
 ## Credits
 
 - Built with Claude Code (AI) for Melty.
