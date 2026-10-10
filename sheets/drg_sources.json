@@ -1,0 +1,24 @@
+{
+  "sheet": "drg_sources",
+  "about": "Where each piece of gear lives inside the player's Deep Rock Galactic pak (FSD/Content/Paks/FSD-WindowsNoEditor.pak). The extractor tries the globs in order against the pak's file list and reads the listed stats from every matching asset.",
+  "columns": {
+    "id": "string",
+    "asset_globs": "list:string: pak paths, * matches anything",
+    "stats": "list:ref:drg_stat_props"
+  },
+  "rows": [
+    {"id": "src_gk2",        "asset_globs": ["*/WeaponsNTools/AssaultRifle/WPN_AssaultRifle.uasset", "*/WeaponsNTools/AssaultRifle/*.uasset"], "stats": ["damage", "clip_size", "max_ammo", "rate_of_fire", "reload_time", "spread_deg"]},
+    {"id": "src_boomstick",  "asset_globs": ["*/WeaponsNTools/SawedOffShotgun/WPN_SawedOffShotgun.uasset", "*/WeaponsNTools/*Boomstick*/*.uasset", "*/WeaponsNTools/SawedOff*/*.uasset"], "stats": ["damage", "pellets", "clip_size", "max_ammo", "rate_of_fire", "reload_time"]},
+    {"id": "src_crspr",      "asset_globs": ["*/WeaponsNTools/FlameThrower/WPN_FlameThrower.uasset", "*/WeaponsNTools/Flame*/*.uasset"], "stats": ["damage", "clip_size", "max_ammo", "rate_of_fire", "reload_time", "range_m"]},
+    {"id": "src_subata",     "asset_globs": ["*/WeaponsNTools/Pistol/WPN_Pistol*.uasset", "*/WeaponsNTools/Pistol/*.uasset"], "stats": ["damage", "clip_size", "max_ammo", "rate_of_fire", "reload_time", "spread_deg"]},
+    {"id": "src_warthog",    "asset_globs": ["*/WeaponsNTools/CombatShotgun/WPN_CombatShotgun.uasset", "*/WeaponsNTools/CombatShotgun/*.uasset"], "stats": ["damage", "pellets", "clip_size", "max_ammo", "rate_of_fire", "reload_time"]},
+    {"id": "src_pgl",        "asset_globs": ["*/WeaponsNTools/GrenadeLauncher/WPN_GrenadeLauncher.uasset", "*/WeaponsNTools/GrenadeLauncher/*.uasset"], "stats": ["aoe_damage", "aoe_radius_m", "clip_size", "max_ammo", "rate_of_fire", "reload_time", "projectile_speed_mps"]},
+    {"id": "src_lead_storm", "asset_globs": ["*/WeaponsNTools/Minigun/WPN_Gatling.uasset", "*/WPN_Gatling.uasset", "*/WeaponsNTools/Minigun/*.uasset", "*/WeaponsNTools/Gatling*/*.uasset"], "stats": ["damage", "max_ammo", "rate_of_fire", "spread_deg"]},
+    {"id": "src_bulldog",    "asset_globs": ["*/WeaponsNTools/Revolver/WPN_Revolver.uasset", "*/WeaponsNTools/Revolver/*.uasset"], "stats": ["damage", "clip_size", "max_ammo", "rate_of_fire", "reload_time"]},
+    {"id": "src_cryo",       "asset_globs": ["*/WeaponsNTools/Grenades/*Cryo*.uasset", "*/WeaponsNTools/Grenades/*Ice*.uasset", "*/Grenade*Cryo*.uasset"], "stats": ["damage", "radius_m", "fuse_s"]},
+    {"id": "src_he",         "asset_globs": ["*/WeaponsNTools/Grenades/*HE*.uasset", "*/WeaponsNTools/Grenades/*HighExplosive*.uasset", "*/Grenade*HE*.uasset"], "stats": ["damage", "radius_m", "fuse_s"]},
+    {"id": "src_plasma",     "asset_globs": ["*/WeaponsNTools/Grenades/*Plasma*.uasset", "*/Grenade*Plasma*.uasset"], "stats": ["damage", "radius_m"]},
+    {"id": "src_sticky",     "asset_globs": ["*/WeaponsNTools/Grenades/*Sticky*.uasset", "*/Grenade*Sticky*.uasset"], "stats": ["damage", "radius_m", "fuse_s"]},
+    {"id": "src_sentry",     "asset_globs": ["*/WeaponsNTools/*Sentry*/*.uasset", "*/Sentry*Gun*.uasset", "*/*Sentry*.uasset"], "stats": ["damage", "rate_of_fire", "ammo", "range_m"]}
+  ]
+}

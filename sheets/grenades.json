@@ -1,0 +1,23 @@
+{
+  "sheet": "grenades",
+  "about": "One grenade per class. fuse_s 0 means it goes off on impact; freeze_s slows hit enemies to a crawl (DRG's cryo rule) using the actor's CustomTimeDilation.",
+  "columns": {
+    "id": "string",
+    "class": "ref:classes",
+    "display_name": "string",
+    "drg_source": "ref:drg_sources",
+    "damage": "number",
+    "radius_m": "number",
+    "fuse_s": "number",
+    "freeze_s": "number",
+    "sticks": "bool",
+    "throw_speed_mps": "number",
+    "count": "int"
+  },
+  "rows": [
+    {"id": "cryo_grenade",   "class": "scout",    "display_name": "Cryo Grenade",   "drg_source": "src_cryo",    "damage": 15,  "radius_m": 4.0, "fuse_s": 1.2, "freeze_s": 5.0, "sticks": false, "throw_speed_mps": 18, "count": 4},
+    {"id": "he_grenade",     "class": "driller",  "display_name": "High Explosive Grenade", "drg_source": "src_he", "damage": 165, "radius_m": 4.0, "fuse_s": 2.0, "freeze_s": 0, "sticks": false, "throw_speed_mps": 18, "count": 4},
+    {"id": "plasma_burster", "class": "engineer", "display_name": "Plasma Burster Missile", "drg_source": "src_plasma", "damage": 90, "radius_m": 3.0, "fuse_s": 0, "freeze_s": 0, "sticks": false, "throw_speed_mps": 25, "count": 4},
+    {"id": "sticky_grenade", "class": "gunner",   "display_name": "Sticky Grenade", "drg_source": "src_sticky",  "damage": 110, "radius_m": 3.0, "fuse_s": 1.5, "freeze_s": 0, "sticks": true,  "throw_speed_mps": 18, "count": 6}
+  ]
+}

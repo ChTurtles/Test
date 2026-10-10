@@ -1,0 +1,18 @@
+{
+  "sheet": "tuning",
+  "about": "Global numbers that bridge the two games.",
+  "columns": {
+    "id": "string",
+    "value": "number|string",
+    "why": "string"
+  },
+  "rows": [
+    {"id": "tick_ms",            "value": 16,   "why": "Game-thread loop period (about 60 Hz)"},
+    {"id": "damage_scale",       "value": 1.0,  "why": "Multiplies every DRG damage number against Far Far West health pools"},
+    {"id": "enemy_refresh_s",    "value": 0.5,  "why": "How often the enemy list is rebuilt"},
+    {"id": "grenade_gravity_mps2", "value": 9.8, "why": "Grenade arc"},
+    {"id": "freeze_dilation",    "value": 0.05, "why": "CustomTimeDilation while frozen by a cryo grenade"},
+    {"id": "resupply_on_pick",   "value": "full", "why": "Choosing a class gives full ammo and grenades"},
+    {"id": "picker_title",       "value": "CHOOSE YOUR DWARF", "why": "Picker heading"}
+  ]
+}

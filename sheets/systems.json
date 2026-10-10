@@ -1,0 +1,20 @@
+{
+  "sheet": "systems",
+  "about": "The mod's Lua modules. Each one is a file in mod/RockAndStoneFrontier/Scripts.",
+  "columns": {
+    "id": "string",
+    "file": "string",
+    "does": "string",
+    "uses": "list:ref:systems"
+  },
+  "rows": [
+    {"id": "sys_core",       "file": "core.lua",       "does": "Logging, game clock, player/camera/keys, line traces, loading the DRG stats the extractor wrote", "uses": []},
+    {"id": "sys_damage",     "file": "damage.lua",     "does": "Finds enemies, probes health, applies damage with the first route that works and remembers it per enemy class", "uses": ["sys_core"]},
+    {"id": "sys_loadout",    "file": "loadout.lua",    "does": "Builds the chosen class's loadout from the sheets plus DRG stats; ammo, clips, reloads, weapon swap", "uses": ["sys_core"]},
+    {"id": "sys_weapons",    "file": "weapons.lua",    "does": "Fires hitscan, shotgun, stream and projectile weapons at the stats' fire rate", "uses": ["sys_core", "sys_damage", "sys_loadout", "sys_gear"]},
+    {"id": "sys_gear",       "file": "gear.lua",       "does": "Grenades (flight, fuse, sticky, cryo freeze, explosion) and the Engineer's turret", "uses": ["sys_core", "sys_damage"]},
+    {"id": "sys_pure_dwarf", "file": "pure_dwarf.lua", "does": "Turns off Far Far West's own guns and spells and hides their props", "uses": ["sys_core"]},
+    {"id": "sys_ui",         "file": "ui.lua",         "does": "Class picker at run start and the ammo/grenade/turret HUD", "uses": ["sys_core"]},
+    {"id": "sys_main",       "file": "main.lua",       "does": "Wires everything to a 60 Hz game-thread loop and the run-start detection", "uses": ["sys_core", "sys_damage", "sys_loadout", "sys_weapons", "sys_gear", "sys_pure_dwarf", "sys_ui"]}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "sheet": "deployables",
+  "about": "Placeable gear. The Engineer's LMG Gun Platform fires at the nearest Far Far West enemy it can see until its ammo runs out.",
+  "columns": {
+    "id": "string",
+    "class": "ref:classes",
+    "display_name": "string",
+    "drg_source": "ref:drg_sources",
+    "damage": "number",
+    "rate_of_fire": "number",
+    "ammo": "int",
+    "range_m": "number",
+    "deploy_key": "string: FKey name",
+    "deploy_distance_m": "number",
+    "max_active": "int"
+  },
+  "rows": [
+    {"id": "lmg_sentry", "class": "engineer", "display_name": "LMG Gun Platform", "drg_source": "src_sentry", "damage": 8, "rate_of_fire": 6, "ammo": 230, "range_m": 25, "deploy_key": "T", "deploy_distance_m": 2.5, "max_active": 1}
+  ]
+}

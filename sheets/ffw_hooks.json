@@ -1,0 +1,32 @@
+{
+  "sheet": "ffw_hooks",
+  "about": "Every point where the mod touches Far Far West (UE 5.8, UE4SS experimental with the official Far Far West signature config). Far Far West's UE4SS config turns off ProcessEvent and Actor tick hooks, so the mod polls on a game-thread timer instead of hooking. verified = in_game once seen working in the running game.",
+  "columns": {
+    "id": "string",
+    "purpose": "string",
+    "method": "string: the engine call the module uses",
+    "targets": "list:string: class/property/function names or name patterns",
+    "fallback": "ref:ffw_hooks|none",
+    "module": "ref:systems",
+    "verified": "enum:in_game|pending"
+  },
+  "rows": [
+    {"id": "player_pawn",     "purpose": "Find the local player's character", "method": "FindFirstOf PlayerController, .Pawn", "targets": ["/Script/Engine.PlayerController", "Pawn"], "fallback": "none", "module": "sys_core", "verified": "pending"},
+    {"id": "game_clock",      "purpose": "Game time for fire rate, fuses and reloads", "method": "GameplayStatics:GetTimeSeconds(world)", "targets": ["/Script/Engine.Default__GameplayStatics"], "fallback": "none", "module": "sys_core", "verified": "pending"},
+    {"id": "level_name",      "purpose": "Tell the hub from a run so the class picker opens when a run starts", "method": "GameplayStatics:GetCurrentLevelName(pc, true)", "targets": ["Menu", "MainMenu", "Hub", "Lobby", "Saloon", "Town", "Frontend", "Entry"], "fallback": "none", "module": "sys_core", "verified": "pending"},
+    {"id": "camera_view",     "purpose": "Aim from the camera", "method": "PlayerCameraManager GetCameraLocation/GetCameraRotation, KismetMathLibrary:GetForwardVector", "targets": ["PlayerCameraManager"], "fallback": "none", "module": "sys_core", "verified": "pending"},
+    {"id": "key_state",       "purpose": "Read mouse and keys every tick (fire held, reload, swap, grenade, turret, picker)", "method": "PlayerController:IsInputKeyDown({KeyName=FName(key)})", "targets": ["LeftMouseButton", "R", "One", "Two", "Three", "Four", "G", "T"], "fallback": "none", "module": "sys_core", "verified": "pending"},
+    {"id": "line_trace",      "purpose": "Hitscan bullets, line of sight, grenade flight collision", "method": "KismetSystemLibrary:LineTraceSingle (Visibility channel)", "targets": ["/Script/Engine.Default__KismetSystemLibrary"], "fallback": "none", "module": "sys_core", "verified": "pending"},
+    {"id": "enemy_list",      "purpose": "Every AI-controlled character in the level (Far Far West's enemies)", "method": "FindAllOf Character, keep those whose Controller IsA AIController and that are alive", "targets": ["/Script/Engine.Character", "/Script/AIModule.AIController"], "fallback": "none", "module": "sys_damage", "verified": "pending"},
+    {"id": "health_probe",    "purpose": "Read an enemy's health so damage can be confirmed and dead enemies skipped", "method": "Reflect over the actor, its components and AbilitySystemComponent.SpawnedAttributes for a float or GameplayAttributeData property named like Health/HP", "targets": ["Health", "CurrentHealth", "HP", "HitPoints"], "fallback": "none", "module": "sys_damage", "verified": "pending"},
+    {"id": "damage_point",    "purpose": "Deal gun/turret/grenade damage the engine way", "method": "GameplayStatics:ApplyPointDamage(target, dmg, dir, hit, pc, pawn, nil)", "targets": ["/Script/Engine.Default__GameplayStatics"], "fallback": "damage_any", "module": "sys_damage", "verified": "pending"},
+    {"id": "damage_any",      "purpose": "Second damage route if point damage changes no health", "method": "GameplayStatics:ApplyDamage(target, dmg, pc, pawn, nil)", "targets": ["/Script/Engine.Default__GameplayStatics"], "fallback": "damage_attr", "module": "sys_damage", "verified": "pending"},
+    {"id": "damage_attr",     "purpose": "Last damage route: lower the probed health value directly, and kill at zero", "method": "write probed Health (GameplayAttributeData BaseValue+CurrentValue or float); at <= 0 call K2_DestroyActor after SetLifeSpan", "targets": ["Health"], "fallback": "none", "module": "sys_damage", "verified": "pending"},
+    {"id": "block_ffw_weapons", "purpose": "Pure dwarf: Far Far West's own guns and spells stop answering their buttons", "method": "For every InputMappingContext, UnmapAction on actions whose name matches a block pattern and none of the keep patterns, then RequestRebuildControlMappings", "targets": ["Fire", "Shoot", "Attack", "Aim", "ADS", "Reload", "Spell", "Cast", "Ability", "Weapon", "Ultimate", "Skill", "Magic", "Primary", "Secondary"], "fallback": "none", "module": "sys_pure_dwarf", "verified": "pending"},
+    {"id": "keep_ffw_actions", "purpose": "Actions that must keep working while weapons are blocked", "method": "name patterns excluded from block_ffw_weapons", "targets": ["Move", "Look", "Jump", "Interact", "Dash", "Sprint", "Crouch", "Slide", "Menu", "Pause", "Map", "Emote", "Chat", "Scoreboard", "Ping", "Camera", "Mouse"], "fallback": "none", "module": "sys_pure_dwarf", "verified": "pending"},
+    {"id": "hide_ffw_weapon", "purpose": "Hide the cowboy's own gun/spell props", "method": "Pawn:GetAttachedActors, SetActorHiddenInGame(true) on actors whose class matches", "targets": ["Weapon", "Gun", "Revolver", "Rifle", "Shotgun", "Pistol", "Spell", "Staff", "Wand", "Magic"], "fallback": "none", "module": "sys_pure_dwarf", "verified": "pending"},
+    {"id": "umg_widget",      "purpose": "Class picker and ammo HUD", "method": "StaticConstructObject UserWidget + WidgetTree + CanvasPanel + TextBlock, AddToViewport", "targets": ["/Script/UMG.UserWidget", "/Script/UMG.WidgetTree", "/Script/UMG.CanvasPanel", "/Script/UMG.TextBlock"], "fallback": "none", "module": "sys_ui", "verified": "pending"},
+    {"id": "spawn_prop",      "purpose": "Visible grenade and turret bodies", "method": "GameplayStatics BeginDeferredActorSpawnFromClass(StaticMeshActor) + FinishSpawningActor, SetStaticMesh(/Engine/BasicShapes/*)", "targets": ["/Script/Engine.StaticMeshActor", "/Engine/BasicShapes/Sphere.Sphere", "/Engine/BasicShapes/Cylinder.Cylinder", "/Engine/BasicShapes/Cube.Cube"], "fallback": "none", "module": "sys_gear", "verified": "pending"},
+    {"id": "time_dilation",   "purpose": "Cryo grenade freeze", "method": "Actor.CustomTimeDilation = 0.05, restored after freeze_s", "targets": ["CustomTimeDilation"], "fallback": "none", "module": "sys_gear", "verified": "pending"}
+  ]
+}

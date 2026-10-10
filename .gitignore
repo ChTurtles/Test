@@ -1,0 +1,6 @@
+/dist/
+/.cache/
+/extractor/target/
+/mod/RockAndStoneFrontier/data/*.lua
+/mod/RockAndStoneFrontier/data/*.log
+__pycache__/

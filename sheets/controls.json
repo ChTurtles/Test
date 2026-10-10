@@ -1,0 +1,19 @@
+{
+  "sheet": "controls",
+  "about": "Buttons the mod reads (FKey names). The class picker uses each class's picker_key.",
+  "columns": {
+    "id": "string",
+    "key": "string: FKey name",
+    "action": "string",
+    "when": "enum:picker|playing|always"
+  },
+  "rows": [
+    {"id": "fire",       "key": "LeftMouseButton", "action": "Fire the equipped DRG weapon (hold for automatic weapons)", "when": "playing"},
+    {"id": "reload",     "key": "R",               "action": "Reload", "when": "playing"},
+    {"id": "primary",    "key": "One",             "action": "Equip primary", "when": "playing"},
+    {"id": "secondary",  "key": "Two",             "action": "Equip secondary", "when": "playing"},
+    {"id": "grenade",    "key": "G",               "action": "Throw grenade", "when": "playing"},
+    {"id": "deploy",     "key": "T",               "action": "Deploy the Engineer's LMG Gun Platform", "when": "playing"},
+    {"id": "repick",     "key": "F6",              "action": "Open the class picker again", "when": "always"}
+  ]
+}

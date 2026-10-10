@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "mode": "installed",
+  "games": [
+    {
+      "slug": "custom-far-far-west",
+      "role": "primary"
+    },
+    {
+      "slug": "deep-rock-galactic",
+      "role": "companion"
+    }
+  ],
+  "components": [
+    {
+      "id": "main",
+      "fileName": "RockAndStoneFrontier-1.0.0.zip",
+      "label": "Rock and Stone Frontier (mod, UE4SS, DRG stat reader)",
+      "kind": "main",
+      "required": true
+    }
+  ],
+  "requirements": [],
+  "mappings": [
+    {
+      "component": "main",
+      "from": "",
+      "to": "{game}"
+    }
+  ],
+  "setup": {
+    "label": "Deep Rock Galactic stats",
+    "launch": {
+      "kind": "exe",
+      "path": "{game}/FarFarWest/Binaries/Win64/ue4ss/Mods/RockAndStoneFrontier/tools/rsf-extract.exe",
+      "args": [
+        "--drg",
+        "{game:deep-rock-galactic}",
+        "--out",
+        "{game}/FarFarWest/Binaries/Win64/ue4ss/Mods/RockAndStoneFrontier/data/drg_stats.lua"
+      ]
+    },
+    "done": {
+      "file": "{game}/FarFarWest/Binaries/Win64/ue4ss/Mods/RockAndStoneFrontier/data/drg_stats.lua",
+      "contains": "return {"
+    },
+    "stopWhenDone": true
+  },
+  "launch": {
+    "kind": "game"
+  }
+}

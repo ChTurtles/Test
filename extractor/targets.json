@@ -1,0 +1,800 @@
+{
+ "sources": [
+  {
+   "id": "src_gk2",
+   "asset_globs": [
+    "*/WeaponsNTools/AssaultRifle/WPN_AssaultRifle.uasset",
+    "*/WeaponsNTools/AssaultRifle/*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "clip_size",
+     "candidates": [
+      "ClipSize",
+      "MagazineSize"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "max_ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "MaxFuel"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "reload_time",
+     "candidates": [
+      "ReloadDuration",
+      "ReloadTime"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "spread_deg",
+     "candidates": [
+      "MaxSpread",
+      "SpreadPerShot",
+      "MinSpread"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_boomstick",
+   "asset_globs": [
+    "*/WeaponsNTools/SawedOffShotgun/WPN_SawedOffShotgun.uasset",
+    "*/WeaponsNTools/*Boomstick*/*.uasset",
+    "*/WeaponsNTools/SawedOff*/*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "pellets",
+     "candidates": [
+      "BulletsPerCarteridge",
+      "BulletsPerCartridge",
+      "BulletsPerShot",
+      "PelletCount"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "clip_size",
+     "candidates": [
+      "ClipSize",
+      "MagazineSize"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "max_ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "MaxFuel"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "reload_time",
+     "candidates": [
+      "ReloadDuration",
+      "ReloadTime"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_crspr",
+   "asset_globs": [
+    "*/WeaponsNTools/FlameThrower/WPN_FlameThrower.uasset",
+    "*/WeaponsNTools/Flame*/*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "clip_size",
+     "candidates": [
+      "ClipSize",
+      "MagazineSize"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "max_ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "MaxFuel"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "reload_time",
+     "candidates": [
+      "ReloadDuration",
+      "ReloadTime"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "range_m",
+     "candidates": [
+      "MaxRange",
+      "Range",
+      "MaxDistance"
+     ],
+     "scale": 0.01,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_subata",
+   "asset_globs": [
+    "*/WeaponsNTools/Pistol/WPN_Pistol*.uasset",
+    "*/WeaponsNTools/Pistol/*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "clip_size",
+     "candidates": [
+      "ClipSize",
+      "MagazineSize"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "max_ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "MaxFuel"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "reload_time",
+     "candidates": [
+      "ReloadDuration",
+      "ReloadTime"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "spread_deg",
+     "candidates": [
+      "MaxSpread",
+      "SpreadPerShot",
+      "MinSpread"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_warthog",
+   "asset_globs": [
+    "*/WeaponsNTools/CombatShotgun/WPN_CombatShotgun.uasset",
+    "*/WeaponsNTools/CombatShotgun/*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "pellets",
+     "candidates": [
+      "BulletsPerCarteridge",
+      "BulletsPerCartridge",
+      "BulletsPerShot",
+      "PelletCount"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "clip_size",
+     "candidates": [
+      "ClipSize",
+      "MagazineSize"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "max_ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "MaxFuel"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "reload_time",
+     "candidates": [
+      "ReloadDuration",
+      "ReloadTime"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_pgl",
+   "asset_globs": [
+    "*/WeaponsNTools/GrenadeLauncher/WPN_GrenadeLauncher.uasset",
+    "*/WeaponsNTools/GrenadeLauncher/*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "aoe_damage",
+     "candidates": [
+      "RadialDamage",
+      "AreaDamage",
+      "ExplosionDamage",
+      "MaxDamage"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "aoe_radius_m",
+     "candidates": [
+      "DamageRadius",
+      "MaxDamageRadius",
+      "RadialDamageRadius",
+      "Radius"
+     ],
+     "scale": 0.01,
+     "value_type": "float"
+    },
+    {
+     "id": "clip_size",
+     "candidates": [
+      "ClipSize",
+      "MagazineSize"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "max_ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "MaxFuel"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "reload_time",
+     "candidates": [
+      "ReloadDuration",
+      "ReloadTime"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "projectile_speed_mps",
+     "candidates": [
+      "InitialSpeed",
+      "ProjectileSpeed"
+     ],
+     "scale": 0.01,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_lead_storm",
+   "asset_globs": [
+    "*/WeaponsNTools/Minigun/WPN_Gatling.uasset",
+    "*/WPN_Gatling.uasset",
+    "*/WeaponsNTools/Minigun/*.uasset",
+    "*/WeaponsNTools/Gatling*/*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "max_ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "MaxFuel"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "spread_deg",
+     "candidates": [
+      "MaxSpread",
+      "SpreadPerShot",
+      "MinSpread"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_bulldog",
+   "asset_globs": [
+    "*/WeaponsNTools/Revolver/WPN_Revolver.uasset",
+    "*/WeaponsNTools/Revolver/*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "clip_size",
+     "candidates": [
+      "ClipSize",
+      "MagazineSize"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "max_ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "MaxFuel"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "reload_time",
+     "candidates": [
+      "ReloadDuration",
+      "ReloadTime"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_cryo",
+   "asset_globs": [
+    "*/WeaponsNTools/Grenades/*Cryo*.uasset",
+    "*/WeaponsNTools/Grenades/*Ice*.uasset",
+    "*/Grenade*Cryo*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "radius_m",
+     "candidates": [
+      "DamageRadius",
+      "MaxDamageRadius",
+      "RadialDamageRadius",
+      "Radius"
+     ],
+     "scale": 0.01,
+     "value_type": "float"
+    },
+    {
+     "id": "fuse_s",
+     "candidates": [
+      "FuseTime",
+      "ExplosionDelay",
+      "TimeToExplode"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_he",
+   "asset_globs": [
+    "*/WeaponsNTools/Grenades/*HE*.uasset",
+    "*/WeaponsNTools/Grenades/*HighExplosive*.uasset",
+    "*/Grenade*HE*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "radius_m",
+     "candidates": [
+      "DamageRadius",
+      "MaxDamageRadius",
+      "RadialDamageRadius",
+      "Radius"
+     ],
+     "scale": 0.01,
+     "value_type": "float"
+    },
+    {
+     "id": "fuse_s",
+     "candidates": [
+      "FuseTime",
+      "ExplosionDelay",
+      "TimeToExplode"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_plasma",
+   "asset_globs": [
+    "*/WeaponsNTools/Grenades/*Plasma*.uasset",
+    "*/Grenade*Plasma*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "radius_m",
+     "candidates": [
+      "DamageRadius",
+      "MaxDamageRadius",
+      "RadialDamageRadius",
+      "Radius"
+     ],
+     "scale": 0.01,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_sticky",
+   "asset_globs": [
+    "*/WeaponsNTools/Grenades/*Sticky*.uasset",
+    "*/Grenade*Sticky*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "radius_m",
+     "candidates": [
+      "DamageRadius",
+      "MaxDamageRadius",
+      "RadialDamageRadius",
+      "Radius"
+     ],
+     "scale": 0.01,
+     "value_type": "float"
+    },
+    {
+     "id": "fuse_s",
+     "candidates": [
+      "FuseTime",
+      "ExplosionDelay",
+      "TimeToExplode"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    }
+   ]
+  },
+  {
+   "id": "src_sentry",
+   "asset_globs": [
+    "*/WeaponsNTools/*Sentry*/*.uasset",
+    "*/Sentry*Gun*.uasset",
+    "*/*Sentry*.uasset"
+   ],
+   "stats": [
+    {
+     "id": "damage",
+     "candidates": [
+      "Damage",
+      "DamagePerShot",
+      "BaseDamage",
+      "DamagePerSecond"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "rate_of_fire",
+     "candidates": [
+      "RateOfFire",
+      "FireRate"
+     ],
+     "scale": 1,
+     "value_type": "float"
+    },
+    {
+     "id": "ammo",
+     "candidates": [
+      "MaxAmmo",
+      "AmmoCount",
+      "ClipSize"
+     ],
+     "scale": 1,
+     "value_type": "int"
+    },
+    {
+     "id": "range_m",
+     "candidates": [
+      "MaxRange",
+      "Range",
+      "MaxDistance"
+     ],
+     "scale": 0.01,
+     "value_type": "float"
+    }
+   ]
+  }
+ ],
+ "gear": [
+  {
+   "id": "gk2",
+   "sheet": "weapons",
+   "source": "src_gk2"
+  },
+  {
+   "id": "boomstick",
+   "sheet": "weapons",
+   "source": "src_boomstick"
+  },
+  {
+   "id": "crspr",
+   "sheet": "weapons",
+   "source": "src_crspr"
+  },
+  {
+   "id": "subata",
+   "sheet": "weapons",
+   "source": "src_subata"
+  },
+  {
+   "id": "warthog",
+   "sheet": "weapons",
+   "source": "src_warthog"
+  },
+  {
+   "id": "pgl",
+   "sheet": "weapons",
+   "source": "src_pgl"
+  },
+  {
+   "id": "lead_storm",
+   "sheet": "weapons",
+   "source": "src_lead_storm"
+  },
+  {
+   "id": "bulldog",
+   "sheet": "weapons",
+   "source": "src_bulldog"
+  },
+  {
+   "id": "cryo_grenade",
+   "sheet": "grenades",
+   "source": "src_cryo"
+  },
+  {
+   "id": "he_grenade",
+   "sheet": "grenades",
+   "source": "src_he"
+  },
+  {
+   "id": "plasma_burster",
+   "sheet": "grenades",
+   "source": "src_plasma"
+  },
+  {
+   "id": "sticky_grenade",
+   "sheet": "grenades",
+   "source": "src_sticky"
+  },
+  {
+   "id": "lmg_sentry",
+   "sheet": "deployables",
+   "source": "src_sentry"
+  }
+ ]
+}

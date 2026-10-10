@@ -1,0 +1,20 @@
+{
+  "sheet": "classes",
+  "about": "The four Deep Rock Galactic classes you can pick when a Far Far West run starts. Each row points at its loadout in the other sheets.",
+  "columns": {
+    "id": "string",
+    "display_name": "string",
+    "picker_key": "string: the FKey name pressed in the class picker",
+    "primary": "ref:weapons",
+    "secondary": "ref:weapons",
+    "grenade": "ref:grenades",
+    "deployable": "ref:deployables|none",
+    "hud_color": "color: R,G,B in 0..1"
+  },
+  "rows": [
+    {"id": "scout",    "display_name": "Scout",    "picker_key": "One",   "primary": "gk2",          "secondary": "boomstick", "grenade": "cryo_grenade",   "deployable": "none",      "hud_color": [0.35, 0.75, 1.0]},
+    {"id": "driller",  "display_name": "Driller",  "picker_key": "Two",   "primary": "crspr",        "secondary": "subata",    "grenade": "he_grenade",     "deployable": "none",      "hud_color": [1.0, 0.55, 0.15]},
+    {"id": "engineer", "display_name": "Engineer", "picker_key": "Three", "primary": "warthog",      "secondary": "pgl",       "grenade": "plasma_burster", "deployable": "lmg_sentry", "hud_color": [1.0, 0.85, 0.2]},
+    {"id": "gunner",   "display_name": "Gunner",   "picker_key": "Four",  "primary": "lead_storm",   "secondary": "bulldog",   "grenade": "sticky_grenade", "deployable": "none",      "hud_color": [0.5, 0.95, 0.4]}
+  ]
+}

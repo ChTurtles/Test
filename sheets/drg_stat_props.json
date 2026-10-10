@@ -1,0 +1,26 @@
+{
+  "sheet": "drg_stat_props",
+  "about": "How each stat column is found inside a DRG asset: property names to look for (first match wins) and the factor that turns the DRG value into the sheet's unit (DRG distances are centimetres).",
+  "columns": {
+    "id": "string: a stat column name used in weapons/grenades/deployables",
+    "candidates": "list:string",
+    "scale": "number",
+    "value_type": "enum:float|int"
+  },
+  "rows": [
+    {"id": "damage",          "candidates": ["Damage", "DamagePerShot", "BaseDamage", "DamagePerSecond"], "scale": 1, "value_type": "float"},
+    {"id": "pellets",         "candidates": ["BulletsPerCarteridge", "BulletsPerCartridge", "BulletsPerShot", "PelletCount"], "scale": 1, "value_type": "int"},
+    {"id": "clip_size",       "candidates": ["ClipSize", "MagazineSize"], "scale": 1, "value_type": "int"},
+    {"id": "max_ammo",        "candidates": ["MaxAmmo", "AmmoCount", "MaxFuel"], "scale": 1, "value_type": "int"},
+    {"id": "ammo",            "candidates": ["MaxAmmo", "AmmoCount", "ClipSize"], "scale": 1, "value_type": "int"},
+    {"id": "rate_of_fire",    "candidates": ["RateOfFire", "FireRate"], "scale": 1, "value_type": "float"},
+    {"id": "reload_time",     "candidates": ["ReloadDuration", "ReloadTime"], "scale": 1, "value_type": "float"},
+    {"id": "aoe_damage",      "candidates": ["RadialDamage", "AreaDamage", "ExplosionDamage", "MaxDamage"], "scale": 1, "value_type": "float"},
+    {"id": "aoe_radius_m",    "candidates": ["DamageRadius", "MaxDamageRadius", "RadialDamageRadius", "Radius"], "scale": 0.01, "value_type": "float"},
+    {"id": "radius_m",        "candidates": ["DamageRadius", "MaxDamageRadius", "RadialDamageRadius", "Radius"], "scale": 0.01, "value_type": "float"},
+    {"id": "fuse_s",          "candidates": ["FuseTime", "ExplosionDelay", "TimeToExplode"], "scale": 1, "value_type": "float"},
+    {"id": "spread_deg",      "candidates": ["MaxSpread", "SpreadPerShot", "MinSpread"], "scale": 1, "value_type": "float"},
+    {"id": "range_m",         "candidates": ["MaxRange", "Range", "MaxDistance"], "scale": 0.01, "value_type": "float"},
+    {"id": "projectile_speed_mps", "candidates": ["InitialSpeed", "ProjectileSpeed"], "scale": 0.01, "value_type": "float"}
+  ]
+}
